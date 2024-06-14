@@ -1,9 +1,16 @@
 return {
-  --   'okuuva/auto-save.nvim',
-  --   cmd = 'ASToggle', -- optional for lazy loading on command
-  --   event = { 'InsertLeave', 'TextChanged' }, -- optional for lazy loading on trigger events
-  --   opts = {
-  --     -- your config goes here
-  --     -- or just leave it empty :)
-  --   },
+  'Pocco81/AutoSave.nvim',
+  enabled = true,
+  execution_message = 'AutoSave: saved at ' .. vim.fn.strftime '%H:%M:%S',
+  events = { 'InsertLeave' },
+  conditions = {
+    exists = true,
+    filename_is_not = {},
+    filetype_is_not = {},
+    modifiable = true,
+  },
+  write_all_buffers = false,
+  on_off_commands = true,
+  clean_command_line_interval = 0,
+  debounce_delay = 135,
 }
