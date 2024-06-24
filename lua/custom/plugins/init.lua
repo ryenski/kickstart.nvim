@@ -4,4 +4,5 @@
 -- See the kickstart.nvim README for more information
 return {
   'slim-template/vim-slim',
+  'f-person/git-blame.nvim',
 }
