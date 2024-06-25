@@ -5,4 +5,5 @@
 return {
   'slim-template/vim-slim',
   'f-person/git-blame.nvim',
+  'tpope/vim-rails',
 }
